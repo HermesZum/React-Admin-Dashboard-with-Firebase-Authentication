@@ -3,9 +3,41 @@
     top: 0;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 250px;
     min-height: 100vh;
     color: white;
     background: linear-gradient(10deg, #810551 0%, #05454d 100%);
     padding: 5px 10px;
+    overflow: hidden;
+}
+
+.navigation .menu {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin-left: auto;
+    font-size: 18px;
+    height: 35px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.navigation .divider {
+    position: relative;
+    margin: 0 auto;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.438);
+}
+
+.navigation .bg-waves {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
 }
