@@ -1,5 +1,5 @@
 import './App.css'
-import {Navigation} from './Components/Navigation/Navigation.jsx';
+import {Navigation} from './Layouts/Navigation/Navigation.jsx';
 
 function App() {
   return (

@@ -1,0 +1,11 @@
+.navigation {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(10deg, #810551 0%, #05454d 100%);
+    padding: 5px 10px;
+}
