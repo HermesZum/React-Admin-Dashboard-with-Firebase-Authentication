@@ -11,6 +11,10 @@
     overflow: hidden;
 }
 
+.navigation.active {
+    width: max-content;
+}
+
 .navigation .menu {
     position: absolute;
     right: 10px;
@@ -24,6 +28,14 @@
     align-items: center;
     z-index: 1;
     cursor: pointer;
+}
+
+.navigation.active .menu {
+    position: relative;
+}
+
+.navigation .menu.active {
+    rotate: 180deg;
 }
 
 .navigation .divider {

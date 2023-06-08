@@ -20,11 +20,26 @@
     bottom: 0;
 }
 
+.navigation.active header {
+    padding: 0;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+.navigation.active header::after,
+.navigation.active header span {
+    display: none;
+}
+
 .navigation header .profile {
     height: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: lightgray;
+}
+
+.navigation.active header .profile {
+    height: 40px;
 }
 
 .profile-img {

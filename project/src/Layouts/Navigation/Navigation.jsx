@@ -4,16 +4,22 @@ import {Nav} from "../../Components/Nav/Nav.jsx";
 import {TbDashboard, TbFileUpload} from "react-icons/tb";
 import {FiChevronLeft, FiMessageSquare} from "react-icons/fi";
 import {VscGraphLine} from "react-icons/vsc";
-import {AiOutlineDollarCircle, AiOutlineUsergroupAdd, AiOutlineUserSwitch,} from "react-icons/ai";
+import {AiOutlineDollarCircle, AiOutlineUsergroupAdd, AiOutlineUserSwitch} from "react-icons/ai";
 import {MdOutlineNotificationsActive, MdSwapHoriz} from "react-icons/md";
 import {RiAccountCircleLine} from "react-icons/ri";
 import {BiDotsHorizontalRounded, BiMessageAltAdd} from "react-icons/bi";
+import {useState} from "react";
 
 export const Navigation = () => {
+
+    const [nav, setNav] = useState(false);
+
     return (
         <>
-            <div className="navigation">
-                <div className="menu">
+            <div className={`navigation ${nav && "active"}`}>
+                <div className={`menu ${nav && "active"}`} onClick={() => {
+                    setNav((prevState) => (!prevState));
+                }}>
                     <FiChevronLeft className="menu-icon" />
                 </div>
                 < Header/>

@@ -10,7 +10,7 @@ export const Header = () => {
 						className="profile-img"
 					/>
 				</div>
-				<span>creative_ambition</span>
+				<span>Admin Dashboard</span>
 			</header>
 		</>
 	)
