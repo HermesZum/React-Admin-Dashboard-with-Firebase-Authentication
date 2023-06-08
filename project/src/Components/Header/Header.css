@@ -20,6 +20,10 @@
     bottom: 0;
 }
 
+.navigation.dark header {
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
 .navigation.active header {
     padding: 0;
     margin-top: 10px;

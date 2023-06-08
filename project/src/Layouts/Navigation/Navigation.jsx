@@ -8,15 +8,21 @@ import {AiOutlineDollarCircle, AiOutlineUsergroupAdd, AiOutlineUserSwitch} from 
 import {MdOutlineNotificationsActive, MdSwapHoriz} from "react-icons/md";
 import {RiAccountCircleLine} from "react-icons/ri";
 import {BiDotsHorizontalRounded, BiMessageAltAdd} from "react-icons/bi";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {Theme} from "../../Theme.jsx";
 
 export const Navigation = () => {
 
     const [nav, setNav] = useState(false);
 
+    const {Dark, setDark} = useContext(Theme);
+    const changeTheme = () => {
+            setDark((prevState) => (!prevState));
+    }
+
     return (
         <>
-            <div className={`navigation ${nav && "active"}`}>
+            <div className={`navigation ${nav && "active"} ${Dark && "dark"}`}>
                 <div className={`menu ${nav && "active"}`} onClick={() => {
                     setNav((prevState) => (!prevState));
                 }}>
@@ -39,7 +45,7 @@ export const Navigation = () => {
 
                 <div className="divider"></div>
 
-                <Nav Icon={MdSwapHoriz} title={"Switch to Dark Theme"}/>
+                <Nav Icon={MdSwapHoriz} title={`${Dark ? "Light Theme" : "Dark Theme"}`} onClick={changeTheme}/>
                 <Nav Icon={BiDotsHorizontalRounded} title={"More details"}/>
 
                 <svg
