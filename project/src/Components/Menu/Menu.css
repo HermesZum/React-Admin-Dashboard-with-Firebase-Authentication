@@ -1,0 +1,87 @@
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    --color: #0a6672;
+}
+
+.menu .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu .search-bar input {
+    padding: 8px 16px;
+    border: 1px solid rgba(82, 82, 82, 0.9);
+    border-radius: 100px;
+    flex: 1;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.menu .search-bar input:focus::placeholder {
+    color: var(--color);
+}
+
+.menu .search-bar input:focus {
+    outline: none;
+    border: 1px solid var(--color);
+}
+
+.menu .search-bar .icon {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: rgba(82, 82, 82, 0.9);
+}
+
+.menu .search-bar input:focus ~ .icon {
+    color: var(--color);
+}
+
+.menu .tools {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu .tools .icon {
+    color: rgba(82, 82, 82, 0.9);
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.menu .tools .icon:hover {
+    color: var(--color);
+
+}
+
+.menu .tools .divider {
+    background-color: var(--color);
+    width: 1px;
+    border-radius: 100px;
+    align-self: stretch;
+}
+
+.menu .tools .user {
+    position: relative;
+    height: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--color);
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.menu .tools .user:active {
+    scale: 0.97;
+}
+
+.menu.dark input{
+    color: white;
+}
