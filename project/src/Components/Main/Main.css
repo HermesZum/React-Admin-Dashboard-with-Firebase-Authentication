@@ -34,6 +34,7 @@
 
 .main .row.header:nth-child(2) {
     grid-column: span 2;
+    flex-direction: row;
 }
 
 .main .row .cog {

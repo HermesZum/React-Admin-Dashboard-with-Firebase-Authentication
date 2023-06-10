@@ -3,6 +3,11 @@ import {useContext} from "react";
 import {Theme} from "../../Theme.jsx";
 import {FiSettings} from "react-icons/fi";
 import {RiChat1Line} from "react-icons/ri";
+import {AiOutlineUsergroupAdd} from "react-icons/ai";
+import {RiChat3Line} from "react-icons/ri";
+import {AiOutlineLike} from "react-icons/ai";
+import {IoCashOutline} from "react-icons/io5";
+import {Card} from "../Card/Card.jsx";
 
 export const Main = () => {
 
@@ -44,6 +49,10 @@ export const Main = () => {
 					</svg>
 				</div>
 				<div className="row header">
+					<Card Icon={AiOutlineUsergroupAdd} title="Followers" value="None ;) "/>
+					<Card Icon={RiChat3Line} title="Messages" value="+ 0"/>
+					<Card Icon={AiOutlineLike} title="Likes" value="+ 0"/>
+					<Card Icon={IoCashOutline} title="Earnings" value="$0.0"/>
 					<svg
 						className="bg-waves-2"
 						preserveAspectRatio="none"

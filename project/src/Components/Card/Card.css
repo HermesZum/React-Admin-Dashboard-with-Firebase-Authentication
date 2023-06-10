@@ -1,0 +1,33 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.486);
+}
+
+.card:nth-child(4) {
+    border-right: none;
+}
+
+.card .icon {
+    position: relative;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card .title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+}
+
+.card .value {
+    display: flex;
+    color: lime;
+    gap: 5px;
+}
