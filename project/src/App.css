@@ -13,3 +13,12 @@
     align-items: flex-start;
     background-color: #111111;
 }
+
+::-webkit-scrollbar {
+    background-color: #111111;
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00464e;
+}

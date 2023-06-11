@@ -1,0 +1,41 @@
+.circular-progress {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-progress .details {
+    position: absolute;
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.circular-progress svg {
+    width: 120px;
+    height: 120px;
+    translate: 3px -4px;
+    rotate: -90deg;
+}
+
+.circular-progress .svg-circle-gray {
+    stroke-width: 5;
+    fill: transparent;
+    stroke: var(--dm-stroke-clr);
+}
+
+.circular-progress .svg-circle {
+    stroke-width: 5;
+    fill: transparent;
+    stroke: var(--clr);
+    stroke-linecap: round;
+    stroke-dasharray: 315;
+    stroke-dashoffset: 315;
+    animation: load 1s ease 1s forwards;
+}
+
+@keyframes load {
+    to {
+        stroke-dashoffset: var(--p);
+    }
+}
