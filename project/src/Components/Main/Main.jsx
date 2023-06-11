@@ -8,6 +8,8 @@ import {RiChat3Line} from "react-icons/ri";
 import {AiOutlineLike} from "react-icons/ai";
 import {IoCashOutline} from "react-icons/io5";
 import {Card} from "../Card/Card.jsx";
+import {Analytics} from "../Analytics/Analytics.jsx";
+import img from "../../assets/illustration.png";
 
 export const Main = () => {
 
@@ -76,6 +78,19 @@ export const Main = () => {
 						<path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
 					</svg>
 				</div>
+				<span className="section-title">Brief Overview</span>
+				<span className="row square">
+					<Analytics chart_i />
+				</span>
+				<span className="row square">
+					<Analytics chart_ii />
+				</span>
+				<span className="row square">
+					<Analytics chart_iii />
+				</span>
+				<span className="row square">
+					<Analytics title="New Followers" value="+ 0" illustration={img} />
+				</span>
 			</div>
 		</>
 	)
