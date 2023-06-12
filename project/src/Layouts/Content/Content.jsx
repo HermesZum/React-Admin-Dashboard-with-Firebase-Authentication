@@ -1,12 +1,12 @@
 import "./Content.css";
 import {useContext} from "react";
-import {Theme} from "../../Theme.jsx";
+import {ThemeContext} from "../../ThemeContext.jsx";
 import {Menu} from "../../Components/Menu/Menu.jsx";
 import {Main} from "../../Components/Main/Main.jsx";
 
 export const Content = () => {
 
-	const {Dark} = useContext(Theme);
+	const {Dark} = useContext(ThemeContext);
 
 	return (
 		<>

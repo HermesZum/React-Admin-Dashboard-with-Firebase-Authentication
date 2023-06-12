@@ -1,6 +1,6 @@
 import "./Main.css";
 import {useContext, useState} from "react";
-import {Theme} from "../../Theme.jsx";
+import {ThemeContext} from "../../ThemeContext.jsx";
 import {FiSettings} from "react-icons/fi";
 import {
     RiChat1Line,
@@ -21,7 +21,7 @@ import {CircularProgress} from "../CircularProgress/CircularProgress.jsx";
 
 export const Main = () => {
 
-    const {Dark} = useContext(Theme);
+    const {Dark} = useContext(ThemeContext);
 
     const [value_i] = useState(Math.floor(Math.random() * 100));
     const [value_i_offset] = useState(315 - (value_i / 100) * 315);

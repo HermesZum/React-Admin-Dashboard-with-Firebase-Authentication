@@ -1,6 +1,6 @@
 import "./Menu.css";
 import {useContext} from "react";
-import {Theme} from "../../Theme.jsx";
+import {ThemeContext} from "../../ThemeContext.jsx";
 import {BiSearch} from "react-icons/bi";
 import {AiOutlineUser} from "react-icons/ai";
 import {TbMessages} from "react-icons/tb";
@@ -11,7 +11,7 @@ import {HiOutlineLogout} from "react-icons/hi";
 
 export const Menu = () => {
 
-	const {Dark, setDark} = useContext(Theme);
+	const {Dark, setDark} = useContext(ThemeContext);
 
 	return (
 		<>

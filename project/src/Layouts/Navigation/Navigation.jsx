@@ -9,15 +9,15 @@ import {MdOutlineNotificationsActive, MdSwapHoriz} from "react-icons/md";
 import {RiAccountCircleLine} from "react-icons/ri";
 import {BiDotsHorizontalRounded, BiMessageAltAdd} from "react-icons/bi";
 import {useContext, useState} from "react";
-import {Theme} from "../../Theme.jsx";
+import {ThemeContext} from "../../ThemeContext.jsx";
 
 export const Navigation = () => {
 
     const [nav, setNav] = useState(false);
 
-    const {Dark, setDark} = useContext(Theme);
+    const {Dark, setDark} = useContext(ThemeContext);
     const changeTheme = () => {
-            setDark((prevState) => (!prevState));
+        setDark(!Dark);
     }
 
     return (
