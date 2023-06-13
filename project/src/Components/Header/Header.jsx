@@ -1,5 +1,13 @@
 import './Header.css';
+import {useEffect, useState} from "react";
 export const Header = () => {
+
+	const [username, setUsername] = useState("");
+
+	useEffect(() => {
+		setUsername(localStorage.getItem("username"));
+	}, []);
+
 	return (
 		<>
 			<header>
@@ -10,7 +18,7 @@ export const Header = () => {
 						className="profile-img"
 					/>
 				</div>
-				<span>Admin Dashboard</span>
+				<span>{username}</span>
 			</header>
 		</>
 	)

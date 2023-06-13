@@ -1,6 +1,8 @@
 import "./Menu.css";
 import {useContext} from "react";
 import {ThemeContext} from "../../ThemeContext.jsx";
+import {auth} from "../../Firebase.jsx";
+import {signOut} from "firebase/auth";
 import {BiSearch} from "react-icons/bi";
 import {AiOutlineUser} from "react-icons/ai";
 import {TbMessages} from "react-icons/tb";
@@ -12,6 +14,12 @@ import {HiOutlineLogout} from "react-icons/hi";
 export const Menu = () => {
 
 	const {Dark, setDark} = useContext(ThemeContext);
+	const logout = () => {
+		signOut(auth)
+		.then(() => {
+
+		})
+	};
 
 	return (
 		<>
@@ -29,7 +37,7 @@ export const Menu = () => {
 
 					<HiOutlineMoon className="icon" onClick={() => setDark(!Dark)}/>
 					<RiSettingsLine className="icon"/>
-					<HiOutlineLogout className="icon"/>
+					<HiOutlineLogout className="icon" onClick={logout}/>
 
 					<div className="divider"></div>
 

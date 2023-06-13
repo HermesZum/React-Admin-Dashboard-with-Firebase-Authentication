@@ -25,3 +25,4 @@ chrome-user-data
 *.swp
 *.swo
 *.env
+/project/src/Firebase.jsx

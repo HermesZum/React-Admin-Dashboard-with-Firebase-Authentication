@@ -1,5 +1,5 @@
 import "./Main.css";
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {ThemeContext} from "../../ThemeContext.jsx";
 import {FiSettings} from "react-icons/fi";
 import {
@@ -21,6 +21,8 @@ import {CircularProgress} from "../CircularProgress/CircularProgress.jsx";
 
 export const Main = () => {
 
+    const [username, setUsername] = useState("");
+
     const {Dark} = useContext(ThemeContext);
 
     const [value_i] = useState(Math.floor(Math.random() * 100));
@@ -34,6 +36,10 @@ export const Main = () => {
 
     const [value_iv] = useState(Math.floor(Math.random() * 100));
     const [value_iv_offset] = useState(315 - (value_iv / 100) * 315);
+
+    useEffect(() => {
+        setUsername(localStorage.getItem("username"));
+    }, []);
 
     return (
         <>
@@ -207,7 +213,7 @@ export const Main = () => {
                                 alt="profile-img" className="profile-img"/>
                         </div>
                         <div className="info">
-                            <h2 className="admin-name">3Gear</h2>
+                            <h2 className="admin-name">{username}</h2>
                             <span className="admin-about">Developer</span>
                         </div>
                         <div className="admin-socials">

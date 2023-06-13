@@ -2,10 +2,13 @@ import "./Login.css";
 import infinity from "../../Assets/infinity.png";
 import warning from "../../Assets/warning.png";
 import {useState} from "react";
+import {auth} from "../../Firebase.jsx";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {signInWithEmailAndPassword} from "firebase/auth";
 
 export const Login = () => {
 
-	const [newUser, setNewUser] = useState(false);
+	const [newUser, setNewUser] = useState(true);
 	const [error, setError] = useState(false);
 	const [errorMsg, setErrorMsg] = useState(false);
 	const [username, setUsername] = useState("");
@@ -17,9 +20,25 @@ export const Login = () => {
 		setError(false);
 
 		if (newUser) {
-
+			createUserWithEmailAndPassword(auth, email, password)
+			.then(() => {
+				localStorage.setItem("username", username);
+			})
+			.catch((error) => {
+				setError(true);
+				const errorMessage = error.message;
+				setErrorMsg(errorMessage);
+			});
 		}else {
-
+			signInWithEmailAndPassword(auth, email, password)
+			.then(() => {
+				localStorage.setItem("username", username);
+			})
+			.catch((error) => {
+				setError(true);
+				const errorMessage = error.message;
+				setErrorMsg(errorMessage);
+			});
 		}
 	}
 
@@ -66,6 +85,9 @@ export const Login = () => {
 					}
 					{error &&
 						<span className="error">Process Failed!</span>
+					}
+					{error &&
+						<span className="error">{errorMsg}</span>
 					}
 					<button className="submit">
 						{newUser ? "Sign Up" : "Log In"}
